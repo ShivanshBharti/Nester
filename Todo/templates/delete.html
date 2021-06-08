@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+	body{
+		background-color: #50C878;
+	}
+
+	input{
+		width: 10%;
+		padding: 4px 2px;
+		margin: 4px 0;
+		box-sizing: border-box;
+	}
+
+	input::placeholder {
+	  color: #d3d3d3;
+	}
+
+	.submit{
+		background-color: red;
+	}
+
+
+
+
+	.btn-danger{
+		background-color: #ffae19;
+		border-color: #e59400;
+	}
+
+</style>
+
+<p>Are you you want to get rid of this"{{item}}"?</p>
+<a class="btn btn-sm btn-danger" href="{% url 'List'  %}">Cancel</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit" name="Confirm">
+
+</form>
